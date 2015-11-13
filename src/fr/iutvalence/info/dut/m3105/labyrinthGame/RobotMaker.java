@@ -1,8 +1,20 @@
 package fr.iutvalence.info.dut.m3105.labyrinthGame;
 
-public interface RobotMaker {
+public class RobotMaker {
 
-	public RobotArtificialIntelligence CreateRobot();
-	
+	public static RobotArtificialIntelligence createRobot(String typerobot)
+	{
+		if (typerobot.equals("Dumb")){
+			
+			return new DumbRobotMaker().CreateRobot();
+		}
 
+		if (typerobot.equals("LessDumb")){
+			
+			return new LessDumbRobotMaker().CreateRobot();
+		}
+		
+			return null;
+		
+	}
 }

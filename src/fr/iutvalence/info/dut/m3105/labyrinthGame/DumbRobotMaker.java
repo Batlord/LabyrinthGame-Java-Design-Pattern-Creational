@@ -1,6 +1,6 @@
 package fr.iutvalence.info.dut.m3105.labyrinthGame;
 
-public class DumbRobotMaker implements RobotMaker{
+public class DumbRobotMaker implements DRobotMaker{
 
 	@Override
 	public RobotArtificialIntelligence CreateRobot() {
