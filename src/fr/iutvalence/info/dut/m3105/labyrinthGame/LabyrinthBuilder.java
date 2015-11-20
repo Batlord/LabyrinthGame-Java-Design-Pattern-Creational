@@ -11,20 +11,32 @@ public class LabyrinthBuilder
 	private Set<Position> forbiddenCellsPositions = new HashSet<Position>();
 	
 
-	public LabyrinthBuilder width(int width)
+	public LabyrinthBuilder width(int width) throws InvalidParameterException
 	{
+		if (width <= 0)
+		{
+			throw new InvalidParameterException();
+		}
 		this.width = width;
 		return this;
 	}
 	
-	public LabyrinthBuilder height(int height)
+	public LabyrinthBuilder height(int height) throws InvalidParameterException
 	{
+		if (height <= 0)
+		{
+			throw new InvalidParameterException();
+		}
 		this.height = height;
 		return this;
 	}
 	
-	public LabyrinthBuilder exitPosition(Position position)
+	public LabyrinthBuilder exitPosition(Position position) throws InvalidParameterException
 	{
+		if (position != null)
+		{
+			throw new InvalidParameterException();
+		}
 		this.position = position;
 		return this;
 	}

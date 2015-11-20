@@ -13,8 +13,9 @@ public class TestLabyrinthGame {
 	 * 
 	 * @param args
 	 *            command-line arguments (none expected here)
+	 * @throws InvalidParameterException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidParameterException {
 		Set<Position> blockPositions = new HashSet<Position>();
 		blockPositions.add(new Position(2, 0));
 		blockPositions.add(new Position(3, 0));
